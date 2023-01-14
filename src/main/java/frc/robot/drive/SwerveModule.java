@@ -27,7 +27,7 @@ public class SwerveModule {
         initEncoder(encoderID);
         initDriveMotor(driveMotorID);
         initTurnMotor(turnMotorID);
-        // what does feed forward do?
+        // what does feed forward do? real life correcter
         this.feedforward = new SimpleMotorFeedforward(ModuleConstants.kDriveS, ModuleConstants.kDriveV,
                 ModuleConstants.kDriveA);
         this.angleOffset = angleOffset;
@@ -56,6 +56,7 @@ public class SwerveModule {
             drive.set(ControlMode.PercentOutput, percentOutput);
         } else {
             // else feedforward? what is feedforward? does it mean continue at current speed
+            // sets voltage to continue at the current speed
             drive.setVoltage(feedforward.calculate(desiredState.speedMetersPerSecond)
                     + ModuleConstants.kDriveP * (desiredState.speedMetersPerSecond - getVelocityMPS()));
         }

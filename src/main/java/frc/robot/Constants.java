@@ -148,15 +148,15 @@ public class Constants {
         public static final int kDriveContinuousCurrentLimit = 35;
         public static final int kDrivePeakCurrentLimit = 60;
         public static final double kDrivePeakCurrentDuration = 0.1;
-
-        public static final double kDriveS = 0.519;
-        public static final double kDriveV = 2.306;
-        public static final double kDriveA = 0.0;
+        // what does this meaaaaan???
+        public static final double kDriveS = 0.519; // static
+        public static final double kDriveV = 2.306; // velocity
+        public static final double kDriveA = 0.0; // acceleration
 
         public static final double kDriveP = 1.5;
         public static final double kDriveI = 0.0;
         public static final double kDriveD = 0.0;
-        public static final double kDriveF = 0; // 0.25 / 0.54 * 0.1;
+        public static final double kDriveF = 0; // 0.25 / 0.54 * 0.1; ???
 
         public static final double kTurnP = 0.6;
         public static final double kTurnI = 0;
