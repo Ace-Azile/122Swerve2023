@@ -23,7 +23,7 @@ public class SwerveModule {
     private double lastAngle;
     // initialize all the things
     public SwerveModule(int driveMotorID, int turnMotorID, int encoderID, Rotation2d angleOffset) {
-        id = (driveMotorID / 10) - 1;
+        id = (driveMotorID / 10);
         initEncoder(encoderID);
         initDriveMotor(driveMotorID);
         initTurnMotor(turnMotorID);
